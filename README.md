@@ -7,4 +7,4 @@ ____
 - С применением Flexbox
 - Адаптив до 320px
 
-[https://wraaap.github.io/brandio-green/]([http://sabaka.net](https://wraaap.github.io/brandio-green/))
+[https://wraaap.github.io/brandio-green/](https://wraaap.github.io/brandio-green/)
