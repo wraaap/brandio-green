@@ -50,28 +50,12 @@ function burgerMenu() {
     }
   }
   window.addEventListener('scroll', fixedNav)
-  
-
-//   // <!-- Initialize Swiper -->
-//  const swiper = new Swiper(".mySwiper", {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//       slidesPerGroup: 3,
-//       loop: true,
-//       loopFillGroupWithBlank: true,
-//       pagination: false,
-//       navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//       },
-//     });
 
 
 // <!-- Initialize Swiper -->
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 30,
-  // slidesPerGroup: 3,
   loop: true,
   loopFillGroupWithBlank: true,
   pagination: false,
@@ -97,3 +81,18 @@ const swiper = new Swiper(".mySwiper", {
     }
   }
 });
+
+function animationDecor() {
+  let heroDecorator1 = document.querySelector('.hero__decorator-1')
+  let heroDecorator2 = document.querySelector('.hero__decorator-2')
+  let heroDecorator3 = document.querySelector('.hero__decorator-3')
+  let value = window.scrollY;
+
+  heroDecorator1.style.top = (value * 0.5 - 114) + 'px';
+  heroDecorator1.style.left = (value * -0.3 - 135) + 'px';
+  heroDecorator2.style.top = (value * 0.15 - 114) + 'px';
+  heroDecorator2.style.left = (value * 0.1 + 241) + 'px';
+  heroDecorator3.style.bottom = value * -0.5 + 'px';
+  heroDecorator3.style.left = value * -0.7 + 'px';
+}
+window.addEventListener('scroll', animationDecor)
