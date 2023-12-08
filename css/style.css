@@ -167,6 +167,7 @@ body.locked {
 
 .navbar__login-btn:hover {
   color: #0AC05E;
+  transition: all 300ms ease-in;
 }
 
 .navbar__btn {
@@ -229,6 +230,7 @@ body.locked {
 
 .menu__item-link:hover {
   color: #0AC05E;
+  transition: all 300ms ease-in;
 }
 
 .burger {
@@ -259,7 +261,9 @@ body.locked {
   right: -50px;
   max-width: 628px;
 }
-
+.hero__item-img.animated {
+  animation-delay: 2s;
+}
 .hero__item-img img {
   width: 100%;
 }
@@ -269,6 +273,9 @@ body.locked {
   font-weight: 700;
   font-size: 94px;
   color: #313131;
+}
+.hero__title.animated {
+  animation-delay: 0.5s;
 }
 
 .hero__title span {
@@ -282,9 +289,15 @@ body.locked {
   font-size: 16px;
   line-height: 30px;
 }
+.hero__text.animated {
+  animation-delay: 1s;
+}
 
 .hero__btns {
   margin-top: 40px;
+}
+.hero__btns.animated {
+  animation-delay: 1.5s;
 }
 
 .hero__btn {
@@ -302,6 +315,11 @@ body.locked {
   font-size: 18px;
   padding: 16px 19px 15px 19px;
   text-align: center;
+}
+
+.hero__contact-btn:hover {
+  border: 1px solid #0AC05E;
+  margin-left: 21px;
 }
 
 .hero__demo {
@@ -356,6 +374,14 @@ body.locked {
   padding: 20px;
 }
 
+.partners__logo:hover,
+.hero__demo:hover,
+.btn:hover,
+.footer__social-icon-bg:hover {
+  scale: 1.05;
+  transition: all 500ms ease-in-out;
+}
+
 .advantages {
   margin-top: 140px;
   padding: 0 80px;
@@ -384,6 +410,10 @@ body.locked {
           align-items: center;
   width: 270px;
   margin: 0 20px;
+}
+.advantages__item:hover {
+  scale: 1.02;
+  transition: all 600ms ease-in-out;
 }
 
 .advantages__icon {
@@ -525,6 +555,12 @@ body.locked {
 .about__contact-btn::after {
   content: url(../img/icon-play.svg);
   margin: 2px 0 0 22px;
+}
+
+.about__contact-btn:hover {
+  scale: 1.02;
+  opacity: 0.8;
+  transition: all 500ms ease-in-out;
 }
 
 .about__item-right {
@@ -805,6 +841,11 @@ body.locked {
           box-shadow: 0px 100px 80px rgba(56, 56, 56, 0.1), 0px 64.8148px 46.8519px rgba(56, 56, 56, 0.0759259), 0px 38.5185px 25.4815px rgba(56, 56, 56, 0.0607407), 0px 20px 13px rgba(56, 56, 56, 0.05), 0px 8.14815px 6.51852px rgba(56, 56, 56, 0.0392593), 0px 1.85185px 3.14815px rgba(56, 56, 56, 0.0240741);
 }
 
+.getstarted__button:hover {
+  background: #06b859;
+  transition: all 300ms ease-in-out;
+}
+
 .getstarted__decorator {
   position: absolute;
   top: -50px;
@@ -839,6 +880,7 @@ footer {
 
 .footer__list-item > a:hover {
   color: #0AC05E;
+  transition: all 300ms ease-in-out;
 }
 
 .footer__items {
@@ -889,6 +931,12 @@ footer {
 
 .footer__phone {
   margin-top: 17px;
+}
+.footer__phone:hover,
+.footer__email:hover {
+  color: #0AC05E;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 
 .footer__social {
@@ -953,6 +1001,19 @@ footer {
 
 .footer__copywrite-link:hover {
   color: #0AC05E;
+  transition: all 300ms ease-in-out;
+}
+
+.animated {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 @media (min-width: 640px) {
