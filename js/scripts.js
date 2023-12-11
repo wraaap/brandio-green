@@ -82,17 +82,26 @@ const swiper = new Swiper(".mySwiper", {
   }
 });
 
-function animationDecor() {
-  let heroDecorator1 = document.querySelector('.hero__decorator-1')
-  let heroDecorator2 = document.querySelector('.hero__decorator-2')
-  let heroDecorator3 = document.querySelector('.hero__decorator-3')
-  let value = window.scrollY;
+function animationDecorAll() {
+// Получаем начальные значения из стилей
+let heroDecorator1 = document.querySelector('.hero__decorator-1')
+let heroDecorator2 = document.querySelector('.hero__decorator-2')
+let heroDecorator3 = document.querySelector('.hero__decorator-3')
+let initialTop1 = parseInt(window.getComputedStyle(heroDecorator1).getPropertyValue('top'));
+let initialLeft1 = parseInt(window.getComputedStyle(heroDecorator1).getPropertyValue('left'));
+let initialTop2 = parseInt(window.getComputedStyle(heroDecorator2).getPropertyValue('top'));
+let initialLeft2 = parseInt(window.getComputedStyle(heroDecorator2).getPropertyValue('left'));
 
-  heroDecorator1.style.top = (value * 0.5 - 114) + 'px';
-  heroDecorator1.style.left = (value * -0.3 - 135) + 'px';
-  heroDecorator2.style.top = (value * 0.15 - 114) + 'px';
-  heroDecorator2.style.left = (value * 0.1 + 241) + 'px';
-  heroDecorator3.style.bottom = value * -0.5 + 'px';
-  heroDecorator3.style.left = value * -0.7 + 'px';
-}
+  function animationDecor() {
+    let value = window.scrollY;
+
+    heroDecorator1.style.top = (value * 0.5 + initialTop1) + 'px';
+    heroDecorator1.style.left = (value * -0.3 + initialLeft1) + 'px';
+    heroDecorator2.style.top = (value * 0.15 + initialTop2) + 'px';
+    heroDecorator2.style.left = (value * 0.1 + initialLeft2) + 'px';
+    heroDecorator3.style.bottom = value * -0.5 + 'px';
+    heroDecorator3.style.left = value * -0.7 + 'px';
+  }
 window.addEventListener('scroll', animationDecor)
+}
+animationDecorAll()
